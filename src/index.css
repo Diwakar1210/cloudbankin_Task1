@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    scroll-behavior: smooth;
+    font-family: "Nunito", serif;
+    background-color: #f6fbff;
+}
+h1,h2,h3,h4,h5,h6,p,ol,ul,li {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+label{
+    display: block;
+    width:100%;
+    margin-bottom: 5px;
+    color: var(--blackClr);
+    font-weight: 500;
+    font-size: 14px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    font-weight: normal;
+}
+input:focus{
+    outline: none;
+    border: 1px solid var(--primaryColor);
+}
+input::placeholder{
+    color:#aaaaaa;
+    font-family: "Nunito", serif;
+}
+select{
+    appearance: none;
+    width:100%;
+    height: 40px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px;
+    transition: 0.3s ease;
+    background-image: url(../src/assets/svg/arrow-down-s-line.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+}
+select:focus{
+    outline: none;
+    border: 1px solid var(--primaryColor);
+}
+select::placeholder{
+    color:#aaaaaa;
+    font-family: "Nunito", serif;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    font-family: "Nunito", serif;
+    resize: vertical;
+}
+textarea:focus{
+    outline: none;
+    border: 1px solid var(--primaryColor);
+}
+:root{
+    --primaryColor: #4184f1;
+    --whiteClr:#ffffff;
+    --blackClr:#000000;
+}
+/* Header starts */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: var(--whiteClr);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo h1{
+    background-color: #4184f1;
+    font-size: 22px;
+    padding: 5px 7px;
+    color: var(--whiteClr);
+    border-radius: 8px;
+}
+.user_Login div{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+.user_Login div span:nth-child(1){
+    font-size: 13px;
+    display: block;
+    background-color: var(--primaryColor);
+    color: var(--whiteClr);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+}
+.user_Login div svg{
+    width: 20px;
+    height: 20px;
+}
+/* Header ends */
+/* Tab UI starts */
+.nav_section{
+    height: calc(100vh - 61px);
+    padding: 30px 100px;
+}
+.nav-tabs{
+    white-space: nowrap;
+}
+.dotted-line {
+    width: 30px;
+    height: 2px;
+    border-bottom: 2px dotted black;
+  }
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+.nav-tabs .tab{
+    position: relative;
+}
+/* .dotted_line{
+    position: absolute;
+    width: 54px;
+    height: 2px;
+    border-bottom: 4px dotted black;
+    top: 17px;
+    right: -30px;
+} */
+.nav-tabs a{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.nav-tabs a div{
+    transition: 0.3s ease;
+}
+.nav-tabs a div span{
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    line-height: 35px;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+.nav-tabs a div p{
+    color: var(--blackClr);
+    font-size: 14px;
+    margin-top:15px;
+    font-weight: 500;
+}
+.nav-tabs a.active div span{
+    background-color: var(--primaryColor);
+    color: var(--whiteClr);
+}
+.nav-tabs a.active div p{
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+.section{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: var(--whiteClr);
+}
+  .form_container{
+    margin-top: 30px;
+    padding: 30px 120px;
+    height: calc(70vh - 70px);
+    overflow: auto;
+  }
+  .form_container::-webkit-scrollbar {
+    width: 7px;
+    height: 100px;
+}
+.form_container::-webkit-scrollbar-thumb {
+    background: lightgrey; 
+    border-radius: 10px;
+  }
+.form_section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px 0px 0px 0px;
+}
+.form_section2{
+    padding-top: 20px;
+}
+.form_fields{
+    margin-bottom:20px;
+}
+.form_footer{
+    border-top:1px solid lightgrey;
+    padding: 10px 30px;
+    text-align: end;
+    background-color: var(--whiteClr);
+}
+.form_footer .btn{
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid #aaaaaa;
+}
+.form_footer .btn:nth-child(2){
+    background-color: var(--primaryColor);
+    color: var(--whiteClr);
+    border: none;
+}
+.form_footer .btn:hover{
+    opacity: 0.7;
+}
+#file{
+    display:none;
+}
+.file_label{
+    border: 2px dashed #aaaaaa;
+    height: 55px;
+    line-height: 35px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    font-family: "Nunito", serif;
+    text-align: center;
+    cursor: pointer;
+}
+.file_label span{
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+.nodataavailable{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #aaaaaa;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.nodataavailable p{
+    color: var(--blackClr);
+    font-weight: bold;
+}
+.menu{
+    display: none;
+}
+
+/* Tab UI ends */
+/* Responsive starts */
+@media screen and (max-width:576px){
+    body{
+        background-color: var(--whiteClr);
+    }
+    label{
+        font-size: 13px;
+    }
+    input{
+        font-size: 13px;
+        padding: 10px;
+    }
+    select{
+        font-size: 13px;
+    }
+    textarea{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .menu{
+        display: unset;
+        width: 25px;
+        background-color: transparent;
+        border: none;
+    }
+    .logo{
+        display: none;
+    }
+    .user_Login{
+        display: none;
+    }
+    header{
+        box-shadow: none;
+        border-bottom: 1px solid #d7d7d7;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    .section{
+        box-shadow: none;
+    }
+    .nav_section{
+        padding: 20px 10px;
+        height: calc(100% - 50px);
+        margin-top: 50px;
+    }
+    .form_container{
+        padding: 20px 10px;
+        margin:10px 0 30px 0;
+        height: 100%;
+    }
+    .form_container h2{
+        font-size: 18px;
+    }
+    .nav-tabs{
+        overflow-x: auto;
+    }
+    .form_section{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .form_footer{
+        padding: 10px 0 10px 0;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.1);
+        border-top: none;
+    }
+    .form_fields{
+        margin-bottom: 5px;
+    }
+    .form_section2 {
+        padding-top: 10px;
+    }
+    .nav-tabs{
+        gap: 20px;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .nav-tabs a div span{
+        font-size: 13px;
+    }
+    .nav-tabs a div p{
+        margin-top: 10px;
+    }
+}
+/* Responsive ends */
